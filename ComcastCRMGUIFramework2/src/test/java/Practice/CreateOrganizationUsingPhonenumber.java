@@ -19,7 +19,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import com.mysql.jdbc.Driver;
 
-public class TC03_CreateOrganizationUsingPhonenumber 
+public class CreateOrganizationUsingPhonenumber 
 {
 
 	static WebDriver driver ;

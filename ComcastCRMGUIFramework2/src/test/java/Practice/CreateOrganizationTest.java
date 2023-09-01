@@ -18,7 +18,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import com.mysql.jdbc.Driver;
 
-public class TC01_CreateOrganizationTest
+public class CreateOrganizationTest
 {
 	static WebDriver driver ;
 	public static void main(String[] args) throws IOException, SQLException 
