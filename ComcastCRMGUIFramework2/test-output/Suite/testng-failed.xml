@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="classes" name="Test(failed)">
+    <parameter name="browser" value="chrome"/>
+    <groups>
+      <run>
+        <exclude name="smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.crm.orgtest.TC03_CreateOrganizationUsingPhonenumber">
+        <methods>
+          <include name="createOrgUsingPhonno"/>
+        </methods>
+      </class> <!-- com.crm.orgtest.TC03_CreateOrganizationUsingPhonenumber -->
+      <class name="com.crm.orgtest.TC01_CreateOrganisationTest">
+        <methods>
+          <include name="createorganisation"/>
+        </methods>
+      </class> <!-- com.crm.orgtest.TC01_CreateOrganisationTest -->
+      <class name="com.crm.orgtest.TC02_CreateOrganizationwithIndustryTest">
+        <methods>
+          <include name="createOrgwithIndustry"/>
+        </methods>
+      </class> <!-- com.crm.orgtest.TC02_CreateOrganizationwithIndustryTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

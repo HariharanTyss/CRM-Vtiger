@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-08-30T17:53:59 IST" name="Default suite" finished-at="2023-08-30T17:54:55 IST" duration-ms="56112">
+    <groups>
+      <group name="smoke">
+        <method signature="TC06_CreateConatactWithphoneno.createContactwithPhone()[pri:0, instance:com.crm.contacttest.TC06_CreateConatactWithphoneno@694abbdc]" name="createContactwithPhone" class="com.crm.contacttest.TC06_CreateConatactWithphoneno"/>
+      </group> <!-- smoke -->
+    </groups>
+    <test started-at="2023-08-30T17:53:59 IST" name="Default test" finished-at="2023-08-30T17:54:55 IST" duration-ms="56112">
+      <class name="com.crm.contacttest.TC06_CreateConatactWithphoneno">
+        <test-method is-config="true" signature="browserSetup()[pri:0, instance:com.crm.contacttest.TC06_CreateConatactWithphoneno@694abbdc]" started-at="2023-08-30T17:53:59 IST" name="browserSetup" finished-at="2023-08-30T17:54:07 IST" duration-ms="8832" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSetup -->
+        <test-method is-config="true" signature="login()[pri:0, instance:com.crm.contacttest.TC06_CreateConatactWithphoneno@694abbdc]" started-at="2023-08-30T17:54:07 IST" name="login" finished-at="2023-08-30T17:54:16 IST" duration-ms="8556" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="createContactwithPhone()[pri:0, instance:com.crm.contacttest.TC06_CreateConatactWithphoneno@694abbdc]" started-at="2023-08-30T17:54:16 IST" name="createContactwithPhone" finished-at="2023-08-30T17:54:50 IST" duration-ms="34260" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createContactwithPhone -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.crm.contacttest.TC06_CreateConatactWithphoneno@694abbdc]" started-at="2023-08-30T17:54:50 IST" name="logout" finished-at="2023-08-30T17:54:54 IST" duration-ms="3838" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.crm.contacttest.TC06_CreateConatactWithphoneno@694abbdc]" started-at="2023-08-30T17:54:54 IST" name="closeBrowser" finished-at="2023-08-30T17:54:55 IST" duration-ms="480" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.crm.contacttest.TC06_CreateConatactWithphoneno -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
