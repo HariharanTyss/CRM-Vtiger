@@ -29,7 +29,7 @@ import com.crm.generic.fileutility.FileUtility;
 import com.crm.generic.webdriverutility.Webdriverutility;
 import com.mysql.jdbc.Driver;
 
-public class TC03_CreateOrganizationUsingPhonenumber extends BaseClass
+public class TC03_CreateOrganizationUsingPhonenumberTest extends BaseClass
 {
 	@Test
 	public void createOrgUsingPhonno() throws Throwable {

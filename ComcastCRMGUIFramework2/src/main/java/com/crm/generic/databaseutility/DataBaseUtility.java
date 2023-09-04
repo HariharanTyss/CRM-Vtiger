@@ -13,7 +13,9 @@ public class DataBaseUtility
 	public void getConnectToDataBase(String url,String unm,String pwd) throws SQLException 
 	{
 		Driver driver=new Driver();
+		
 		DriverManager.registerDriver(driver);
+	
 		conn = DriverManager.getConnection(url, unm, pwd);
 	}
 	public ResultSet executeSelectQuery(String query) throws SQLException 

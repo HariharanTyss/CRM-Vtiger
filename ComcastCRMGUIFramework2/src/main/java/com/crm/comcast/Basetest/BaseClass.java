@@ -69,7 +69,7 @@ public class BaseClass
 	@AfterMethod(groups = "smoke")
 	public void logout() {
 
-		//Mousehover to signOut logo //img[@src='themes/softed/images/user.PNG']
+		//Mousehover to signOut logo 
 		Actions ac=new Actions(driver);
 		
 		ac.moveToElement(driver.findElement(By.xpath("(//td[@class='small'])[2]"))).perform();

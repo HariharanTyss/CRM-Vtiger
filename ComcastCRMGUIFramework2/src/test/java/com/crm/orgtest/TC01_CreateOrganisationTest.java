@@ -9,7 +9,6 @@ import com.crm.generic.ObjectRepository.OrganizationInformationPage;
 
 public class TC01_CreateOrganisationTest extends BaseClass
 {
-
 	@Test
 	public void createorganisation() throws Throwable {
 		
@@ -17,6 +16,7 @@ public class TC01_CreateOrganisationTest extends BaseClass
 		String accname = exu.getDataFromExcelFile("Organisation", 1, 2);
 		int randomno=jau.getrandomnumber();
 		String accountname = accname+randomno;
+		
 		//String accountname = "Qsp1875";
 		
 		//Entering into Homepage

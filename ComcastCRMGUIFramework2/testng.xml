@@ -3,7 +3,6 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.crm.orgtest.TC03_CreateOrganizationUsingPhonenumber"/>
       <class name="com.crm.orgtest.TC01_CreateOrganisationTest"/>
       <class name="com.crm.orgtest.TC02_CreateOrganizationwithIndustryTest"/>
     </classes>
