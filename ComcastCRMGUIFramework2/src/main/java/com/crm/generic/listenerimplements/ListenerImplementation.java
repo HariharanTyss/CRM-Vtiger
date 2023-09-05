@@ -1,6 +1,12 @@
 package com.crm.generic.listenerimplements;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.Date;
+
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.io.FileHandler;
 import org.testng.ISuite;
 import org.testng.ISuiteListener;
 import org.testng.ITestContext;
@@ -23,12 +29,16 @@ import com.crm.comcast.Basetest.BaseClass;
 public class ListenerImplementation implements ITestListener,ISuiteListener
 {
 	public ExtentReports report;
-	public ExtentTest test;
+	public static ExtentTest test;
 
 	public void onStart(ISuite suite) 
 	{
+		Date date=new Date();
+		//System.out.println(date);
+		String cdate = date.toString().replace(" ", "_").replace(":", "_");
+
 		/* Config the Extent Spark Reporter */
-		ExtentSparkReporter spark=new ExtentSparkReporter("./AdavnceReport/report.html");
+		ExtentSparkReporter spark=new ExtentSparkReporter("./AdavnceReport/report"+cdate+".html");
 		spark.config().setDocumentTitle("CRM Test Suite");
 		spark.config().setReportName("CRM Report");
 		spark.config().setTheme(Theme.STANDARD);
@@ -39,9 +49,9 @@ public class ListenerImplementation implements ITestListener,ISuiteListener
 		report.setSystemInfo("Device", "Admin1");
 		report.setSystemInfo("OS", "winndows-11");
 		report.setSystemInfo("Browser", "Chrome-116");
-		
+
 	}
-	
+
 
 	public void onFinish(ISuite suite) {
 		/* REport BAckups*/
@@ -49,45 +59,28 @@ public class ListenerImplementation implements ITestListener,ISuiteListener
 	}
 
 	public void onTestStart(ITestResult result) {
-		test=report.createTest(result.getName()+"<<Started Test EXecution>>");
-		
-		
+		test=report.createTest(result.getName()+" <<Started Test Execution>>");
+
 	}
 
 	public void onTestSuccess(ITestResult result) {
-		test.log(Status.PASS,result.getName()+"<< Test Sucess >>");
-		
+		test.log(Status.PASS,result.getName()+" << Test Sucess >>");
+
 	}
 
 	public void onTestFailure(ITestResult result) {
-		test.log(Status.INFO, result.getName());
+		test.log(Status.INFO, result.getName()+"<< Test Failed >>");
+
+		TakesScreenshot screenshot=(TakesScreenshot)BaseClass.extradriver;
+		String src = screenshot.getScreenshotAs(OutputType.BASE64);
 		
-		TakesScreenshot ssdriver=(TakesScreenshot)BaseClass.extradriver;
-		// TODO Auto-generated method stub
+		test.addScreenCaptureFromBase64String(src);
+
+		
+		}
+
+
+
+
+
 	}
-
-	public void onTestSkipped(ITestResult result) {
-		// TODO Auto-generated method stub
-
-	}
-
-	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-		// TODO Auto-generated method stub
-	}
-
-	public void onTestFailedWithTimeout(ITestResult result) {
-		// TODO Auto-generated method stub
-	}
-
-	public void onStart(ITestContext context) {
-		// TODO Auto-generated method stub
-	}
-
-	public void onFinish(ITestContext context) {
-		// TODO Auto-generated method stub
-	}
-
-
-
-
-}

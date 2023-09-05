@@ -18,6 +18,9 @@ import com.crm.generic.fileutility.FileUtility;
 import com.crm.generic.webdriverutility.JavaUtility;
 import com.crm.generic.webdriverutility.Webdriverutility;
 
+
+
+
 public class BaseClass 
 {
 	public  WebDriver driver =null;
@@ -27,10 +30,10 @@ public class BaseClass
 	public JavaUtility jau=new JavaUtility();
 	public Webdriverutility wdu=new Webdriverutility();
 	
-	//@Parameters("browser")
+	@Parameters({"browser","url"})
 	@BeforeClass(groups = "smoke")
-	public void browserSetup() throws Throwable {
-		String browsername = fiu.getDataFromPropertyFile("browser");
+	public void browserSetup(String browsername,String url ) throws Throwable {
+		//String browsername = fiu.getDataFromPropertyFile("browser");
 		if(browsername.equals("chrome"))
 		{
 			driver=new ChromeDriver();
@@ -48,20 +51,21 @@ public class BaseClass
 		
 		extradriver=driver;
 		// Navigate to url
-		String url=fiu.getDataFromPropertyFile("url");
+		//String url=fiu.getDataFromPropertyFile("url");
 		driver.get(url);
 		driver.manage().window().maximize();
 		System.out.println("open Browser");
 
 	}
+	@Parameters({"username","password"})
 	@BeforeMethod(groups = "smoke")
-	public void login() throws Throwable {
+	public void login(String username,String password) throws Throwable {
 		//Entering  Login credentials
 		LoginPage  loginpg =new LoginPage(driver);
 		
-		String username=fiu.getDataFromPropertyFile("username");
-		String password=fiu.getDataFromPropertyFile("password");
-		
+//		String username=fiu.getDataFromPropertyFile("username");
+//		String password=fiu.getDataFromPropertyFile("password");
+//		
 		loginpg.Login(username, password);
 		System.out.println("login");
 		
