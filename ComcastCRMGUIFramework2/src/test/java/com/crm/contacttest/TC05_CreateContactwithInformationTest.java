@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 import com.crm.comcast.Basetest.BaseClass;
 
-public class TC05_CreateContactwithInformation  extends BaseClass
+public class TC05_CreateContactwithInformationTest  extends BaseClass
 {
 	@Test(groups = "smoke")
 	public void createContactwithInformation() 

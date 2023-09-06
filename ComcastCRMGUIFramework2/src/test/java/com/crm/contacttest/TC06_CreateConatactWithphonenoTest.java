@@ -12,7 +12,7 @@ import com.crm.generic.ObjectRepository.HomePage;
 import com.crm.generic.ObjectRepository.OrganisationPage;
 import com.crm.generic.ObjectRepository.OrganizationInformationPage;
 
-public class TC06_CreateConatactWithphoneno  extends BaseClass
+public class TC06_CreateConatactWithphonenoTest  extends BaseClass
 {
 	@Test(groups = "smoke")
 	public void createContactwithPhone() throws Throwable 
