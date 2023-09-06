@@ -26,7 +26,7 @@ import com.crm.comcast.Basetest.BaseClass;
  * Listener Implementation class for Configuring Test report Log
  *
  */
-public class ListenerImplementation extends BaseClass implements ITestListener,ISuiteListener 
+public class ListenerImplementation  implements ITestListener,ISuiteListener 
 {
 	public ExtentReports report;
 	public static ExtentTest test;
@@ -38,17 +38,17 @@ public class ListenerImplementation extends BaseClass implements ITestListener,I
 		String cdate = date.toString().replace(" ", "_").replace(":", "_");
 
 		/* Config the Extent Spark Reporter */
-		ExtentSparkReporter spark=new ExtentSparkReporter("./AdavnceReport/report"+cdate+".html");
-		spark.config().setDocumentTitle("CRM Test Suite");
+		ExtentSparkReporter spark=new ExtentSparkReporter("./AdavnceReport/Report"+cdate+".html");
+		spark.config().setDocumentTitle("CRM Test Suite/Advanced ");
 		spark.config().setReportName("CRM Report");
-		spark.config().setTheme(Theme.STANDARD);
+		spark.config().setTheme(Theme.DARK);
 
 		/* Add Environmrnt information And Create TEst*/
 		report=new ExtentReports();
 		report.attachReporter(spark);
-		report.setSystemInfo("Device", "Admin1");
-		report.setSystemInfo("OS", "winndows-11");
-		report.setSystemInfo("Browser", "Chrome-116");
+		report.setSystemInfo("Device", "Admin");
+		report.setSystemInfo("OS", "winndows-11-pro");
+		report.setSystemInfo("Browser", "Chrome-116.0");
 
 	}
 

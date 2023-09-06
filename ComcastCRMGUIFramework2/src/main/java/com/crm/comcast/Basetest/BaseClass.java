@@ -20,8 +20,8 @@ import com.crm.generic.webdriverutility.Webdriverutility;
 
 public class BaseClass 
 {
-	public  WebDriver driver =null;
-	public  static WebDriver extradriver =null;
+	public  WebDriver driver;
+	public  static WebDriver extradriver ;
 	public FileUtility fiu =new FileUtility();
 	public ExcelUtility exu=new ExcelUtility();
 	public JavaUtility jau=new JavaUtility();
