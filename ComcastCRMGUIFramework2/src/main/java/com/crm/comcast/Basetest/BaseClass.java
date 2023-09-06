@@ -29,7 +29,7 @@ public class BaseClass
 	
 	@BeforeClass(groups = "smoke")
 	public void browserSetup( ) throws Throwable {
-		String browsername = fiu.getDataFromPropertyFile("browser");
+		String browsername =System.getProperty("browser");
 		if(browsername.equals("chrome"))
 		{
 			driver=new ChromeDriver();
@@ -47,10 +47,11 @@ public class BaseClass
 		
 		extradriver=driver;
 		// Navigate to url
-		String url=fiu.getDataFromPropertyFile("url");
+		String url=System.getProperty("url");
 		driver.get(url);
 		driver.manage().window().maximize();
 		System.out.println("open Browser");
+		
 
 	}
 	//@Parameters({"username","password"})
@@ -59,8 +60,8 @@ public class BaseClass
 		//Entering  Login credentials
 		LoginPage  loginpg =new LoginPage(driver);
 		
-		String username=fiu.getDataFromPropertyFile("username");
-		String password=fiu.getDataFromPropertyFile("password");
+		String username=System.getProperty("username");
+		String password=System.getProperty("password");
 //		
 		loginpg.Login(username, password);
 		System.out.println("login");

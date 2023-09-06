@@ -2,53 +2,25 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-05T17:07:24 IST" name="Suite" finished-at="2023-09-05T17:07:36 IST" duration-ms="12457">
+  <suite started-at="2023-09-06T14:35:53 IST" name="Default suite" finished-at="2023-09-06T14:36:00 IST" duration-ms="6446">
     <groups>
     </groups>
-    <test started-at="2023-09-05T17:07:24 IST" name="Test" finished-at="2023-09-05T17:07:36 IST" duration-ms="12457">
-      <class name="demo.DemoTest2">
-        <test-method is-config="true" signature="browserSetup(java.lang.String,java.lang.String)[pri:0, instance:demo.DemoTest2@4cc451f2]" started-at="2023-09-05T17:07:24 IST" name="browserSetup" finished-at="2023-09-05T17:07:29 IST" duration-ms="5165" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[firefox]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://localhost:8888/]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserSetup -->
-        <test-method is-config="true" signature="login(java.lang.String,java.lang.String)[pri:0, instance:demo.DemoTest2@4cc451f2]" started-at="2023-09-05T17:07:29 IST" name="login" finished-at="2023-09-05T17:07:31 IST" duration-ms="1993" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[admin]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[manager]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="demotest2()[pri:0, instance:demo.DemoTest2@4cc451f2]" started-at="2023-09-05T17:07:31 IST" name="demotest2" finished-at="2023-09-05T17:07:31 IST" duration-ms="19" status="FAIL">
-          <exception class="java.lang.AssertionError">
+    <test started-at="2023-09-06T14:35:53 IST" name="Default test" finished-at="2023-09-06T14:36:00 IST" duration-ms="6446">
+      <class name="demo.DemoTest">
+        <test-method signature="demotest2()[pri:0, instance:demo.DemoTest@50eac852]" started-at="2023-09-06T14:35:54 IST" name="demotest2" finished-at="2023-09-06T14:36:00 IST" duration-ms="6249" status="FAIL">
+          <exception class="java.lang.NullPointerException">
             <message>
-              <![CDATA[null]]>
+              <![CDATA[null value in entry: url=null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: null
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.fail(Assert.java:106)
-at demo.DemoTest2.demotest2(DemoTest2.java:18)
+              <![CDATA[java.lang.NullPointerException: null value in entry: url=null
+at com.google.common.collect.CollectPreconditions.checkEntryNotNull(CollectPreconditions.java:33)
+at com.google.common.collect.SingletonImmutableBiMap.<init>(SingletonImmutableBiMap.java:43)
+at com.google.common.collect.ImmutableBiMap.of(ImmutableBiMap.java:83)
+at com.google.common.collect.ImmutableMap.of(ImmutableMap.java:130)
+at org.openqa.selenium.remote.DriverCommand.GET(DriverCommand.java:191)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)
+at demo.DemoTest.demotest2(DemoTest.java:21)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -79,19 +51,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- demotest2 -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:demo.DemoTest2@4cc451f2]" started-at="2023-09-05T17:07:31 IST" name="logout" finished-at="2023-09-05T17:07:34 IST" duration-ms="2293" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logout -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:demo.DemoTest2@4cc451f2]" started-at="2023-09-05T17:07:34 IST" name="closeBrowser" finished-at="2023-09-05T17:07:36 IST" duration-ms="2635" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- demo.DemoTest2 -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- demo.DemoTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

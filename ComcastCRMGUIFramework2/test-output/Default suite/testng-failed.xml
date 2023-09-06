@@ -3,15 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.crm.contacttest.TC06_CreateConatactWithphoneno">
+      <class name="demo.DemoTest">
         <methods>
-          <include name="login"/>
-          <include name="createContactwithPhone"/>
-          <include name="logout"/>
-          <include name="closeBrowser"/>
-          <include name="browserSetup"/>
+          <include name="demotest2"/>
         </methods>
-      </class> <!-- com.crm.contacttest.TC06_CreateConatactWithphoneno -->
+      </class> <!-- demo.DemoTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

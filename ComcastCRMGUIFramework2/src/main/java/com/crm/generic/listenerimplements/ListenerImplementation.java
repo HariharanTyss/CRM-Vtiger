@@ -26,7 +26,7 @@ import com.crm.comcast.Basetest.BaseClass;
  * Listener Implementation class for Configuring Test report Log
  *
  */
-public class ListenerImplementation implements ITestListener,ISuiteListener
+public class ListenerImplementation extends BaseClass implements ITestListener,ISuiteListener 
 {
 	public ExtentReports report;
 	public static ExtentTest test;
